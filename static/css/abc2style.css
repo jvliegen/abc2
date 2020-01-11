@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #101932;
   --main-text-color: white;
+  --highlight-text-color: orange;
 }
 
 body {
@@ -40,38 +41,41 @@ div.header__logo {
 div.header__title {
   flex: 1;
   font-size: 32px;
+  margin-left: 20px;
 }
 
 /*
  * NAVIGATION
  */
 div#navigation{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   width: 100%;
 }
 
-div#navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 60px;
-}
-
-div#navigation li {
-  float: left;
+div#navigation div.menuitem {
   height: 60px;
   line-height: 60px;
+  flex: 1;
+  text-align: center;
 }
 
 div#navigation a {
   display: block;
   text-decoration: none;
   padding: 0 20px;
+  color: var(--highlight-text-color);
 }
 
 div#navigation a:hover {
-  background-color: white;
+  background-color: #202942;
 }
 
+/*
+ * FOOTER
+ */
 div#footer {
   width: 100%;
   text-align: center;

@@ -1,3 +1,78 @@
+:root {
+  --main-bg-color: #101932;
+  --main-text-color: white;
+}
+
 body {
-  background-color: red;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+div#container {
+  /* four main columns: header, navigation,  subcontainer, footer */
+  display: flex;
+  flex-direction: column; /* in a single column */
+  /*justify-content: space-between; */
+  align-items: center; /* place the 3 main columns, centered */
+
+  margin: 0 10%;
+}
+
+div#main {
+  background-color: white;
+  color: red;
+  flex: 1;
+}
+
+div#header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+div.header__logo {
+}
+
+div.header__title {
+  flex: 1;
+  font-size: 32px;
+}
+
+/*
+ * NAVIGATION
+ */
+div#navigation{
+  width: 100%;
+}
+
+div#navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+}
+
+div#navigation li {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+}
+
+div#navigation a {
+  display: block;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+div#navigation a:hover {
+  background-color: white;
+}
+
+div#footer {
+  width: 100%;
+  text-align: center;
 }

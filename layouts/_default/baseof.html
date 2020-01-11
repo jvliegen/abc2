@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {{- partial "head.html" . -}}
+    {{ partial "head.html" }}
   </head>
   <body>
     <div id="container">
-
-      <div id="content">
-        <h1>Hello world</h1>
+      <div id="header">
+        {{ partial "construction/header.html" .}}
       </div>
-
+      <div id="navigation">
+        <!--
+          Tom make the **context** available IN the partial
+          the dot has to be added 
+        -->
+        {{ partial "construction/navigation.html" .}}
+      </div>
+      <div id="main">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
+      <div id="footer">
+        {{ partial "construction/footer.html" . }}
+      </div>
     </div> <!-- end of container -->
   </body>
 </html>
